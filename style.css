@@ -54,7 +54,6 @@ body {
 }
 
 .section-1 header {
-  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -115,7 +114,7 @@ a:hover {
   border-radius: 8px;
   color: var(--white-color);
   margin-top: 20px;
-  
+
 }
 
 /* Hover effect of the first 'Sign up' button */
@@ -149,7 +148,6 @@ a:hover {
   justify-content: center;
   align-items: center;
   gap: 50px;
-  padding: 0 130px;
   margin-bottom: 120px;
 }
 
@@ -182,7 +180,7 @@ a:hover {
   background-color: var(--gray-color);
   padding: 135px 0;
   color: var(--dark-blue-color);
-  
+
 }
 
 .quote-container {
@@ -209,7 +207,7 @@ a:hover {
 .section-4 {
   width: 100%;
   padding: 110px 220px 140px;
-  margin: 0 auto;;
+  margin: 0 auto;
 }
 
 .call-to-action-container {
@@ -219,11 +217,12 @@ a:hover {
   border-radius: 8px;
   display: flex;
   justify-content: space-between;
+  transition: all 0.3s ease;
 }
 
-.call-to-action-text-container {
+/* .call-to-action-text-container {
   flex-grow: 1;
-}
+} */
 
 /* Call to action texts */
 .call-to-action-title {
@@ -248,7 +247,7 @@ a:hover {
 .call-to-action.button {
   background-color: var(--light-blue-color);
   border: 2px solid var(--white-color);
-} 
+}
 
 /* Hover effect of the second 'Sign up' button */
 .call-to-action.button:hover {
@@ -264,3 +263,249 @@ footer {
   text-align: center;
   font-size: 18px;
 }
+
+/* Media queries (Desktop first approach) */
+@media (max-width: 1200px) {
+  /* Modified section 1 padding, cards container gap and section 4 padding */
+  .section-1 {
+    padding: 0 100px;
+  }
+
+  .cards-container {
+    gap: 30px;
+  }
+
+  .section-4 {
+    padding: 80px 100px;
+  }
+
+  .call-to-action-container {
+    padding: 40px 60px 40px 80px;
+  }
+}
+
+@media (max-width: 992px) {
+  /* Modified card item and square cardwidth,section 3 padding, quote container max-width and quote texts font size */
+  .card-item {
+    width: 150px;
+  }
+  
+  .square-card {
+    width: 100%;
+    height: 150px;
+  }
+
+  .section-3 {
+    padding: 100px 20px;
+  }
+
+  .quote-container {
+    max-width: 700px;
+  }
+
+  .quote-text {
+    font-size: 28px;
+  }
+
+  .quote-author {
+    font-size: 20px;
+    margin-right: 20px;
+  }
+
+  .section-4 {
+    padding: 80px 100px;
+  }
+
+  .call-to-action-container {
+    padding: 40px 25px;
+  }
+
+  .call-to-action-text {
+    font-size: 16px;
+  }
+
+  .call-to-action-button-container {
+    width: 20%;
+  }
+  .call-to-action.button {
+    width: 100%;
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Modified section 1 header, nav links, hero texts, hero placeholder, cards container gap, section 4 padding , call to action container padding footer padding */
+  nav ul a {
+    font-size: 16px;
+  }
+
+  .section-1 {
+    padding: 0 20px;
+  }
+
+  .hero-container {
+    padding: 80px 0;
+  }
+
+  .hero-main-text {
+    font-size: 32px;
+  }
+
+  .hero-secondary-text {
+    font-size: 16px;
+  }
+
+  .hero-placeholder {
+    font-size: 16px;
+  }
+
+  .cards-container {
+    gap: 35px;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+  }
+  .card-text {
+    font-size: 16px;
+  }
+
+  .section-4 {
+    padding: 80px 20px;
+  }
+
+  .call-to-action-container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  footer {
+    padding: 35px 0;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Modified every section for mobile view */
+  .section-1 header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .section-1 header h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  header nav {
+    width: 100%;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .hero-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-text-container {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .hero-main-text {
+    font-size: 24px;
+  }
+
+  .hero-secondary-text {
+    font-size: 14px;
+  }
+
+  .hero-placeholder {
+    width: 100%;
+    min-height: 300px;
+    padding: 20px;
+    font-size: 14px;
+  }
+
+  .information-header-text {
+    font-size: 30px;
+    margin: 30px 0;
+  }
+
+  .cards-container {
+    gap: 50px;
+    margin-bottom: 50px;
+  }
+
+  .card-item {
+    width: 130px;
+  }
+
+  .square-card {
+    width: 100%;
+    height: 130px;
+  }
+
+  .card-text {
+    font-size: 14px;
+  }
+
+  .section-3 {
+    padding: 50px 20px;
+  }
+
+  .quote-container {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .quote-text {
+    font-size: 20px;
+  }
+
+  .quote-author {
+    font-size: 16px;
+    margin-right: 0;
+    text-align: right;
+  }
+
+  .section-4 {
+    padding: 50px 20px;
+  }
+
+  .call-to-action-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  .call-to-action-title {
+    font-size: 20px;
+  }
+
+  .call-to-action-text {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  .call-to-action-button-container {
+    width: 35%;
+    margin-top: 15px;
+  }
+
+  .call-to-action.button {
+    width: 100%;
+    padding: 9px 35px;
+    font-size: 14px;
+  }
+
+  footer {
+    font-size: 14px;
+    padding: 20px 0;
+  }
+}
+/* End of media queries */
